@@ -2,23 +2,19 @@
 
 [![Join the chat at https://gitter.im/consensys/truffle](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/consensys/truffle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-**UPDATE:** The newest version of Truffle, v0.3.x, requires changes to the structure of your dapp. Make sure to check out the [migration instructions](https://github.com/ConsenSys/truffle/wiki/Migrating-from-v0.2.x-to-v0.3.0)!
-
-
 -----------------------
 
 
 Truffle is a development environment, testing framework and asset pipeline for Ethereum, aiming to make life as an Ethereum developer easier. With Truffle, you get:
 
-* Built-in smart contract compilation, library linking, deployment and binary management.
+* Built-in smart contract compilation, linking, deployment and binary management.
 * Automated contract testing with Mocha and Chai.
 * Configurable build pipeline with support for custom build processes.
-* Environment management for multiple deployments and public/private networks.
-* Interactive console for managing deployed contracts.
-* Support for custom deploy scripts.
+* Scriptable deployment & migrations framework
+* Network management for deploying to many public & private networks.
+* Interactive console for direct contract communication
 * Instant rebuilding of assets during development.
-* External script runner that executes scripts within your desired environment.
-* Support for JavaScript, SASS, ES6 and JSX built-in.
+* External script runner that executes scripts within a
 
 ### Install
 
@@ -30,9 +26,15 @@ $ npm install -g truffle
 
 Please see the [Official Truffle Documentation](http://truffle.readthedocs.org/en/latest/) for guides, tips, and examples.
 
-### Contributors
+### Contributing
 
-[@tcoulter](https://github.com/tcoulter) - original author
+There are many ways to contribute!
+
+1. Write issues in the [issues tracker](https://github.com/ConsenSys/truffle/issues). Please include as much information as possible!
+1. Take a look at [our Waffle](https://waffle.io/ConsenSys/truffle) for prioritization. Note that this includes issues for Truffle and related tools.
+1. Contact us in our [gitter chat](https://gitter.im/consensys/truffle)!
+
+A project by Consensys and [@tcoulter](https://github.com/tcoulter), and many contributers.
 
 ### License
 

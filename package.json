@@ -1,11 +1,12 @@
 {
   "name": "truffle",
   "namespace": "consensys",
-  "version": "1.0.3-chatch-hack",
+  "version": "2.0.4",
   "description": "Truffle - Simple development framework for Ethereum",
   "dependencies": {
     "async": "^1.4.2",
     "babel-cli": "^6.4.0",
+    "babel-polyfill": "^6.7.4",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
     "babel-register": "^6.7.2",
@@ -16,33 +17,36 @@
     "colors": "^1.1.2",
     "cpr": "^0.4.3",
     "deasync": "^0.1.3",
-    "ether-pudding": "^2.0.6",
+    "del": "^2.2.0",
+    "ether-pudding": "^3.1.2",
     "finalhandler": "^0.4.0",
+    "find-up": "^1.1.2",
     "graphlib": "^2.0.0",
     "jsmin": "^1.0.1",
     "lodash": "^4.5.1",
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.3",
     "node-dir": "^0.1.10",
-    "rimraf": "^2.4.3",
     "serve-static": "^1.10.0",
-    "solc": "^0.3.1-1",
+    "solc": "^0.3.5",
+    "solidity-parser": "^0.0.9",
     "spawn-args": "^0.1.0",
-    "truffle-default-builder": "0.0.9",
+    "temp": "^0.8.3",
+    "truffle-default-builder": "^1.0.1",
     "uglify-js": "^2.6.1",
-    "web3": "^0.15.2",
+    "web3": "^0.16.0",
     "yargs": "^3.27.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.4.5",
-    "temp": "^0.8.3"
+    "babel-cli": "^6.4.5"
   },
   "bin": {
     "truffle": "./cli.js",
     "truffle-exec": "./exec.js"
   },
   "scripts": {
-    "test": "node ./cli.js test"
+    "test": "mocha",
+    "docs": "mkdocs serve"
   },
   "repository": {
     "type": "git",
