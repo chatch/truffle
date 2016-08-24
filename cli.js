@@ -15,6 +15,9 @@ command.run(process.argv.slice(2), function(err) {
     } else {
       if (err instanceof ExtendableError) {
         console.log(err.message);
+      } else if (typeof err == "number") {
+        // If a number is returned, exit with that number.
+        process.exit(err);
       } else {
         // Bubble up all other unexpected errors.
         console.log(err.stack || err.toString());
@@ -29,7 +32,7 @@ command.run(process.argv.slice(2), function(err) {
     // if (fs.existsSync(path.join(working_dir, "config", "app.json"))) {
     //   console.log("Your dapp is meant for an older version of Truffle. Don't worry, there are two solutions!")
     //   console.log("");
-    //   console.log("1) Upgrade you're dapp using the followng instructions (it's easy):");
+    //   console.log("1) Upgrade your dapp using the followng instructions (it's easy):");
     //   console.log("   https://github.com/ConsenSys/truffle/wiki/Migrating-from-v0.2.x-to-v0.3.0");
     //   console.log("");
     //   console.log("   ( OR )")
