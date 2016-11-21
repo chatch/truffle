@@ -1,3 +1,19 @@
+<style>
+  .DocumentationWarning {
+    text-align: center;
+    padding: 1rem;
+    background:rgb(255, 101, 52);
+  }
+
+  .DocumentationWarning a {
+    color: white;
+  }
+</style>
+<section class="DocumentationWarning">
+  <h1>These documents are out of date</h1>
+  <p>Please visit the <a href="http://truffleframework.com/docs/getting_started/contracts">page on the new documentation site</a> for up to date information.</p>
+</section>
+
 # Background
 
 The standard method of interacting with the Ethereum network is through the [Web3](https://github.com/ethereum/web3.js) library, created by the Ethereum foundation. Although this library is very useful, its current contract abstraction makes interacting with contracts difficult, especially for those new to Ethereum development. To smooth the learning curve, Truffle uses the [Ether Pudding](https://github.com/ConsenSys/ether-pudding) library, built on top of Web3, which aims to make interacting with contracts much easier.
@@ -159,7 +175,7 @@ Each contract abstraction has a method called `deployed()`, which you saw used a
 var meta = MetaCoin.deployed();
 ```
 
-**Warning:** This will only work successfully for contracts that have been deployed using `truffle deploy` and are set to be deployed within your [project configuration](/advanced/configuration). This function will throw an error if your contract does not meet this criteria.
+**Warning:** This will only work successfully for contracts that have been deployed using `truffle migrate` and are set to be deployed within your [project configuration](/advanced/configuration). This function will throw an error if your contract does not meet this criteria.
 
 ### Method: at()
 
@@ -186,3 +202,13 @@ MetaCoin.new().then(function(instance) {
 ```
 
 Note that this *is* a transaction and will change the state of the network.
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83874933-1', 'auto');
+  ga('send', 'pageview');
+</script>

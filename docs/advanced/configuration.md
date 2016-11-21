@@ -1,6 +1,26 @@
+<style>
+  .DocumentationWarning {
+    text-align: center;
+    padding: 1rem;
+    background:rgb(255, 101, 52);
+  }
+
+  .DocumentationWarning a {
+    color: white;
+  }
+</style>
+<section class="DocumentationWarning">
+  <h1>These documents are out of date</h1>
+  <p>Please visit the <a href="http://truffleframework.com/docs/advanced/configuration">page on the new documentation site</a> for up to date information.</p>
+</section>
+
 # Location
 
-Your configuration file is called `truffle.js`, and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
+Your configuration file is called `truffle.js` and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
+
+### Resolving Naming Conflicts on Windows
+
+When using the Command Prompt on Windows, the default configuration file name can cause a conflict with the `truffle` executable. If this is the case, we recommend using Windows PowerShell or [Git BASH](https://git-for-windows.github.io/) as these shells do not have this conflict. Alternatively, you can rename the configuration file to `truffle-config.js` to avoid this conflict.
 
 # Example
 
@@ -58,7 +78,7 @@ The network name is used for user interface purposes, such as when running your 
 $ truffle migrate --network live
 ```
 
-You can optionally specify rpc information for each network. Examples below.  
+You can optionally specify rpc information for each network. Examples below.
 
 **Example:**
 
@@ -76,7 +96,7 @@ networks: {
   "morden": {
     network_id: 2,        // Official Ethereum test network
     host: "178.25.19.88", // Random IP for example purposes (do not use)
-    port: 80             
+    port: 80
   },
   "staging": {
     network_id: 1337 // custom private network
@@ -94,7 +114,7 @@ Details about how to connect to your ethereum client. The `host` and `port` keys
 
 * `host`: Hostname pointing to the network location of your Ethereum client (usually "localhost" for development).
 * `port`: Port number where your Etheruem client accepts requests. Default is `8545`.
-* `gas`: Gas limit used for deploys. Default is `4712388`.  
+* `gas`: Gas limit used for deploys. Default is `4712388`.
 * `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
 * `from`: From address used during migrations. If not specified, defaults to the first available account provided by your Ethereum client.
 
@@ -118,3 +138,13 @@ mocha: {
   useColors: true
 }
 ```
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83874933-1', 'auto');
+  ga('send', 'pageview');
+</script>

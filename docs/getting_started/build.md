@@ -1,3 +1,19 @@
+<style>
+  .DocumentationWarning {
+    text-align: center;
+    padding: 1rem;
+    background:rgb(255, 101, 52);
+  }
+
+  .DocumentationWarning a {
+    color: white;
+  }
+</style>
+<section class="DocumentationWarning">
+  <h1>These documents are out of date</h1>
+  <p>Please visit the <a href="http://truffleframework.com/docs/getting_started/build">page on the new documentation site</a> for up to date information.</p>
+</section>
+
 # Default Builder
 
 Truffle comes standard with a default build system which is meant to be easy to use. It's not suitable for every project, and you may choose to use other build systems to package your application. See the [advanced build processes](/advanced/build_processes) section for more details. Note that the default builder is targeted towards web applications, but it can be easily swapped out for another build process that works better for command line tools and libraries.
@@ -79,3 +95,13 @@ The default builder is easy to use for most projects, and allows you to quickly 
 * It is extensible, but again, using custom methods and APIs.
 
 The default builder will likely be deprecated and replaced in future versions of Truffle, but it remains the default to continue to support dapps previously built on top of it. Truffle provides many ways for you to switch to a different build process, however, and you can find many examples in the [advanced build processes](/advanced/build_processes) section.
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83874933-1', 'auto');
+  ga('send', 'pageview');
+</script>
